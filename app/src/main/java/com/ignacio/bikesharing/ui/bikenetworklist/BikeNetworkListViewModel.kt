@@ -9,13 +9,14 @@ import com.ignacio.bikesharing.data.BikesRepositoryImpl
 import com.ignacio.bikesharing.db.BikesLocalDataSourceImpl
 import com.ignacio.bikesharing.network.BikesRemoteDataSourceImpl
 import com.ignacio.bikesharing.network.BikesRetrofit
+import com.ignacio.bikesharing.network.BikesRetrofitKotlinx
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import timber.log.Timber
 
 class BikeNetworkListViewModel: ViewModel() {
-    val remoteDataSource: BikesRemoteDataSource = BikesRemoteDataSourceImpl(BikesRetrofit.bikesApiService)
+    val remoteDataSource: BikesRemoteDataSource = BikesRemoteDataSourceImpl(BikesRetrofitKotlinx.bikesApiService)
     val localDataSource: BikesLocalDataSource = BikesLocalDataSourceImpl()
     val repository: BikesRepository = BikesRepositoryImpl(
         localDataSource, remoteDataSource

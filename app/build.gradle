@@ -45,7 +45,9 @@ dependencies {
     // Logging: Timber
     implementation 'com.jakewharton.timber:timber:4.7.1'
     // serialization
-    implementation "org.jetbrains.kotlinx:kotlinx-serialization-runtime:1.0-M1-1.4.0-rc"
+    //implementation ("org.jetbrains.kotlinx:kotlinx-serialization-runtime:1.0-M1-1.4.0-rc") //{
+    //    exclude group: 'org.jetbrains.kotlinx', module: 'kotlinx-serialization-core-jvm:1.4.0-RC'
+    //}
     //implementation "io.ktor:ktor-client-serialization-jvm:1.4.0"
 
     // network: ktor
@@ -57,7 +59,7 @@ dependencies {
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
     implementation 'com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:0.9.2'
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
-    implementation("com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:0.5.0")
+    implementation("com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:0.7.0")
 
     // Material Components
     implementation 'com.google.android.material:material:1.2.0'
@@ -65,7 +67,7 @@ dependencies {
 
     def nav_version = "2.3.0"
 
-    // Kotlin
+    // navigation
     implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
     implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
 
