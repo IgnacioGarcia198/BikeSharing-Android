@@ -4,8 +4,8 @@ import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.ignacio.bikesharing.domain.BikeNetwork
 import com.ignacio.bikesharing.domain.BikeNetworksResponse
+import com.ignacio.bikesharing.domain.BikesNetworkDeserializerKotlinx
 import com.ignacio.bikesharing.network.BikeNetworkDeserializer
-import com.ignacio.bikesharing.network.BikesNetworkDeserializerKotlinx
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.parse
